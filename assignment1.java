@@ -5,6 +5,7 @@ public class assignment1{
 		double money = 0.00;
 		int exit = 0;
 		int pin = 0;	
+		//pin loop until pin = 1234
 		while(pin != 1234){
 			System.out.println("Please enter your PIN: ");
 			pin = input.nextInt();
@@ -13,6 +14,7 @@ public class assignment1{
 			}
 		}
 		System.out.println("\nWelcome to Huge Bank Inc.\n");
+		//deposit withdrawl loop
 		while(exit == 0){
 			System.out.printf("Your balance: $%.2f\n",money);
 			System.out.println("-1. Make a Deposit");
@@ -22,12 +24,15 @@ public class assignment1{
 			int choice = input.nextInt();
 			System.out.print("\n");
 			switch(choice){
+				//Deposit
 				case 1:
 					System.out.print("Deposit amount: $");
 					int deposit = input.nextInt();
+					//Add to money
 					money += deposit;
 					System.out.println("\nDeposit Successful.\n");
 					break;
+				//Withdrawl
 				case 2:
 					System.out.print("Withdrawl amount: $");
 					int withdrawl = input.nextInt();

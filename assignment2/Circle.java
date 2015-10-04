@@ -7,13 +7,13 @@ public class Circle extends Shape implements Printable{
         this.radius = radius;
         setShapeType("Circle");
         setShapeName("Circle");
-        area = 3.14 * radius * radius;
+        area = Math.PI * radius * radius;
     }
     public double getArea(){
         return area;
     }
     @Override
     public void printDescription(){
-        System.out.println("Type: " + getShapeType() + "\nRadius: " + radius + "\nArea: " + getArea() + "\n");
+        System.out.println("Type: " + getShapeType() + "\nRadius: " + radius + "\n");
     }
 }

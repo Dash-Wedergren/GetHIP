@@ -16,6 +16,6 @@ public class Rhombus extends Shape implements Printable{
     }
     @Override
     public void printDescription(){
-        System.out.println("Type: " + getShapeType() + "\nDiagonal A: " + diagonalA + "\nDiagonal B: " + diagonalB+ "\nArea: " + getArea() + "\n");    
+        System.out.println("Type: " + getShapeType() + "\nDiagonal A: " + diagonalA + "\nDiagonal B: " + diagonalB+ "\n");    
     }
 }

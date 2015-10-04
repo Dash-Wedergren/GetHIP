@@ -6,7 +6,7 @@ public class Triangle extends Shape implements Printable{
     public Triangle(int base, int height){
         super();
         this.base = base;
-        this.height = base;
+        this.height = height;
         setShapeType("Triangle");
         setShapeName("Triangle");
         this.area = base * height * 0.5;
@@ -16,6 +16,6 @@ public class Triangle extends Shape implements Printable{
     }
     @Override
     public void printDescription(){
-        System.out.println("Type: " + getShapeType() + "\nBase: "+ base +"\nHeight: " + height + "\nArea: " + getArea() + "\n");
+        System.out.println("Type: " + getShapeType() + "\nBase: "+ base +"\nHeight: " + height + "\n");
     }
 }

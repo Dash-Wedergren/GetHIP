@@ -14,7 +14,8 @@ public class Rectangle extends Shape implements Printable{
     public double getArea(){
         return area;
     }
+    @Override
     public void printDescription(){
-       System.out.println("Height: " + height+ "\n Width: " + width + "\n Area: " + getArea() + "\n");    
+       System.out.println("Type: " + getShapeType() + "\nHeight: " + height+ "\nWidth: " + width + "\nArea: " + getArea() + "\n");    
     }
 }

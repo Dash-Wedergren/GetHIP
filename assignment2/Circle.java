@@ -12,7 +12,8 @@ public class Circle extends Shape implements Printable{
     public double getArea(){
         return area;
     }
+    @Override
     public void printDescription(){
-        System.out.println("Radius: " + radius + "\n Area: " + getArea() + "\n");
+        System.out.println("Type: " + getShapeType() + "\nRadius: " + radius + "\nArea: " + getArea() + "\n");
     }
 }

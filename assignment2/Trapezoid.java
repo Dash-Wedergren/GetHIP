@@ -16,7 +16,8 @@ public class Trapezoid extends Shape implements Printable{
     public double getArea(){
         return area;
     }
+    @Override
     public void printDescription(){
-        System.out.println("Base A: " + baseA + "\n Base B: " + baseB + "\n Height: " + height + "\n Area: " + getArea() + "\n");    
+        System.out.println("Type is: " + getShapeType() + "\nBase A: " + baseA + "\nBase B: " + baseB + "\nHeight: " + height + "\nArea: " + getArea() + "\n");    
     }
 }

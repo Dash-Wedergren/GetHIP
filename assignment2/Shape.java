@@ -1,4 +1,3 @@
-import java.util.*;
 public abstract class Shape{
     private String shapeType;
     private String shapeName;
@@ -15,4 +14,6 @@ public abstract class Shape{
     public void setShapeName(String name){
         this.shapeName = name;
     }
+    public abstract double getArea();
+    public abstract void printDescription();
 }

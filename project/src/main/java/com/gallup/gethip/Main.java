@@ -1,7 +1,7 @@
 
 package com.gallup.gethip;
 
-import com.gallup.gethip.model.Employee;
+import com.gallup.gethip.model.*;
 import com.j256.ormlite.jdbc.JdbcConnectionSource;
 import com.j256.ormlite.support.ConnectionSource;
 import com.sun.jersey.api.container.grizzly2.GrizzlyServerFactory;
@@ -12,18 +12,15 @@ import org.glassfish.grizzly.http.server.HttpServer;
 import javax.ws.rs.core.UriBuilder;
 import java.io.IOException;
 import java.net.URI;
-import java.sql.SQLException;
-
+import java.sql.*;
 
 public class Main {
 	
 	private static void createDatabaseConnection(){
-		String databaseUrl = "jdbc:mysql://";
+		String databaseUrl = "";
 		ConnectionSource connectionSource;
 		try {
 			connectionSource = new JdbcConnectionSource(databaseUrl);
-			((JdbcConnectionSource)connectionSource).setUsername("");
-			((JdbcConnectionSource)connectionSource).setPassword("");
 			DataSourceManager.setConnectionSource(connectionSource);
 		} catch (SQLException e) {
 			e.printStackTrace();
@@ -32,7 +29,8 @@ public class Main {
 	
 	private static void buildDaos(){
 		try {
-			DataSourceManager.addDao(Employee.class);
+			DataSourceManager.addDao(User.class);
+			DataSourceManager.addDao(Kid.class);
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}

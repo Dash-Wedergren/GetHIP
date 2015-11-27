@@ -31,8 +31,13 @@
 			<groupId>mysql</groupId>
 			<artifactId>mysql-connector-java</artifactId>
 			<version>5.1.37</version>
+		</dependency>	
+		<dependency>
+			<groupId>org.postgresql</groupId>
+			<artifactId>jdbc4</artifactId>
+			<version>9.4</version>
 		</dependency>
-        <!-- uncomment this to get Fastinfoset support:
+		<!-- uncomment this to get Fastinfoset support:
          <dependency>
             <groupId>com.sun.jersey</groupId>
             <artifactId>jersey-fastinfoset</artifactId>
@@ -97,4 +102,11 @@
     <properties>
         <jersey-version>1.19</jersey-version>
     </properties>
+	<repositories>
+	    <repository>
+	        <id>postgresql.local</id>
+	        <name>postgresql</name>
+			<url>file:/home/dash/GetHIP/project/repo</url>
+	    </repository>
+	</repositories>
 </project>

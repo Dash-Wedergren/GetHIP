@@ -40,6 +40,41 @@ public class KidsResource {
     	}
     	return kid;
     }
+    
+    @POST
+    @Consumes("application/json")
+    @Produces("application/json")
+    public Kid createKid(Kid kid){
+    	try{
+    		Kid kidPrime = getDao().createIfNotExists(kid);
+    		if(kidPrime == null){
+    			//error
+    		}else{
+    			return kidPrime;
+    		}
+    	}catch(SQLException e){
+    		e.printStackTrace();
+    	}
+    	return null;
+    }
+    
+    @PUT
+    @Consumes ("application/json")
+    @Produces ("text/plain")
+    public boolean updateKid(Kid kid){
+    	int updateKid;
+		try {
+			updateKid = getDao().update(kid);
+			if(updateKid == 1){
+	    		return true;
+	    	}
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+			return false;
+		}
+		return false;
+    }
     private Dao<Kid, String> getDao(){
     	Dao<Kid, String> dao = DataSourceManager.getInstance().getDao(Kid.class);
     	return dao;
